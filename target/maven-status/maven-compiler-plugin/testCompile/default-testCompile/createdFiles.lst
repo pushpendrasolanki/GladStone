@@ -1,0 +1,7 @@
+com\test\mainlinetestvismc\pages\LoginPage.class
+com\test\mainlinetestvismc\pages\Launch.class
+com\test\mainlinetestvismc\utilities\GlobalMethods.class
+com\test\mainlinetestvismc\utilities\GenerateReport.class
+com\test\mainlinetestvismc\testcases\StartApplicationAndLoginTest.class
+com\test\mainlinetestvismc\pages\AddPatientPage.class
+com\test\mainlinetestvismc\utilities\ExcelReader.class

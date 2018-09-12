@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [GladStoneWebDriverTest]">
+  <test thread-count="5" name="launchpad(failed)">
+    <classes>
+      <class name="com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest">
+        <methods>
+          <include name="launchpad"/>
+          <include name="closeScript"/>
+          <include name="driversetUp"/>
+        </methods>
+      </class> <!-- com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest -->
+    </classes>
+  </test> <!-- launchpad(failed) -->
+</suite> <!-- Failed suite [GladStoneWebDriverTest] -->
