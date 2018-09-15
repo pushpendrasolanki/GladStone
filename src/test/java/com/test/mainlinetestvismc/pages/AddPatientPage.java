@@ -28,6 +28,8 @@ public class AddPatientPage {
 		this.driver = driver;
 	}
 
+	@FindBy(xpath = "/html/body/div[1]/div[3]/div[2]/div[1]/div/ul/li[3]/a/span")
+	public WebElement addPatienttab;
 	@FindBy(xpath = "//*[@id=\"DASHBOARD_TEXT_PORTAL_ADD_PATIENT\"]")
 	public WebElement addPatient;
 
@@ -128,19 +130,25 @@ public class AddPatientPage {
 		
 		
 		Thread.sleep(55000);
-		
-		if (driver.findElement(By.cssSelector(
-				"html body div.wrapper2 div#menu-content-container.col-sm-12.nopadding div#page-content.page-content div#menu-content.login_patient_list-1 div.col-md-4 div.sidebar-filter.p-md button#DASHBOARD_TEXT_PORTAL_ADD_PATIENT.btn.btn-secondary.btn-block"))
-				.isDisplayed()) {
-			driver.findElement(By.cssSelector(
-					"html body div.wrapper2 div#menu-content-container.col-sm-12.nopadding div#page-content.page-content div#menu-content.login_patient_list-1 div.col-md-4 div.sidebar-filter.p-md button#DASHBOARD_TEXT_PORTAL_ADD_PATIENT.btn.btn-secondary.btn-block"))
-					.click();
+		if (addPatienttab.isDisplayed()){
+			addPatienttab.click();
 			Thread.sleep(15000);
-			if(!firstName.isDisplayed()) {
-				return false;
-			}
+			
 			return true;
-		} 
+		}
+		
+		 else if (driver.findElement(By.cssSelector(
+					"html body div.wrapper2 div#menu-content-container.col-sm-12.nopadding div#page-content.page-content div#menu-content.login_patient_list-1 div.col-md-4 div.sidebar-filter.p-md button#DASHBOARD_TEXT_PORTAL_ADD_PATIENT.btn.btn-secondary.btn-block"))
+					.isDisplayed()) {
+				driver.findElement(By.cssSelector(
+						"html body div.wrapper2 div#menu-content-container.col-sm-12.nopadding div#page-content.page-content div#menu-content.login_patient_list-1 div.col-md-4 div.sidebar-filter.p-md button#DASHBOARD_TEXT_PORTAL_ADD_PATIENT.btn.btn-secondary.btn-block"))
+						.click();
+				Thread.sleep(15000);
+				if(!firstName.isDisplayed()) {
+					return false;
+				}
+				return true;
+			}
 
 		else {
 			return false;

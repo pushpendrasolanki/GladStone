@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.AssertJUnit;
 
 public class LoginPage {
 
@@ -24,8 +25,8 @@ public class LoginPage {
 
 	@FindBy(id = "password")
 	public WebElement password;
-	
-	@FindBy(id= "errorMsg")
+
+	@FindBy(id = "errorMsg")
 	public WebElement errorMessage;
 
 	public boolean userNavigateToOTPPage() {
@@ -42,7 +43,7 @@ public class LoginPage {
 				Thread.sleep(5000);
 
 				login.click();
-				
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -58,7 +59,10 @@ public class LoginPage {
 				password.sendKeys(map.get("Password"));
 				Thread.sleep(5000);
 				clickonLoginButton();
-				if(errorMessage.isDisplayed()) {
+				if (errorMessage.isDisplayed()) {
+					AssertJUnit.assertTrue(
+							"Your entered Credentials does not match, but Login error message has been validated",
+							(errorMessage.getText().equals("Invalid email address or password.")));
 					return false;
 				}
 				return true;
@@ -69,6 +73,5 @@ public class LoginPage {
 		}
 		return false;
 	}
-	
 
 }

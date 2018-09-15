@@ -2,6 +2,8 @@ package com.test.mainlinetestvismc.testcases;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
@@ -40,17 +42,17 @@ public class StartApplicationAndLoginTest {
 	}
 
 	@Test
-	public void launchpad() throws IOException {
+	public void launchpad() throws IOException, InterruptedException {
 		
-
+		File workingDir = new File("");
 		log.debug("Launching Application: Gladstone : Portal");
-		PropertyConfigurator.configure(
-				"C:\\Software\\Selenium_workspace\\Vismc\\src\\com\\test\\mainlinetestvismc\\repository\\Log4j.properties");
+		PropertyConfigurator.configure(workingDir.getAbsolutePath()+
+				"\\src\\test\\java\\com\\test\\mainlinetestvismc\\repository\\Log4j.properties");
 
 		log.debug("Reading data from Excel");
-
-		ExcelReader excelReader = new ExcelReader(
-				"C:/Software/Selenium_workspace/GladStoneWebDriverTest/src/test/java/com/test/mainlinetestvismc/repository/Test.xlsx");
+		
+		ExcelReader excelReader = new ExcelReader(workingDir.getAbsolutePath()+
+				"\\src\\test\\java\\com\\test\\mainlinetestvismc\\repository\\Test.xlsx");
 
 		int col = excelReader.getColumnCount("OrderDetail");
 		int Patientcol = excelReader.getColumnCount("PatientDetail");
@@ -64,6 +66,9 @@ public class StartApplicationAndLoginTest {
 		log.debug("Fetching the data from excel");
 		for (int i = 0; i < col; i++) {
 			logindata.put(excelReader.getCellData("OrderDetail", 0, i), excelReader.getCellData("OrderDetail", 1, i));
+
+			logindata.put(excelReader.getCellData("InvalidLoginDetail", 0, i), excelReader.getCellData("InvalidLoginDetail", 1, i));
+		
 		}
 		for (int i = 0; i < Patientcol; i++) {
 			patientdata.put(excelReader.getCellData("PatientDetail", 0, i),
@@ -71,6 +76,13 @@ public class StartApplicationAndLoginTest {
 
 		}
 
+		log.debug("Entering login Entering details");
+		AssertJUnit.assertFalse(loginPage.enterLoginDetail(logindata));
+
+		driver.navigate().back();
+		
+		Thread.sleep(5000);
+		
 		log.debug("Entering login Entering details");
 		AssertJUnit.assertTrue(loginPage.enterLoginDetail(logindata));
 

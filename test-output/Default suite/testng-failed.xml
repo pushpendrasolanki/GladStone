@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.test.mainlinetestvismc.testcases.StartApplicationAndLogin">
+      <class name="com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest">
         <methods>
-          <include name="driversetUp"/>
           <include name="launchpad"/>
+          <include name="closeScript"/>
+          <include name="driversetUp"/>
         </methods>
-      </class> <!-- com.test.mainlinetestvismc.testcases.StartApplicationAndLogin -->
+      </class> <!-- com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,5 +1,6 @@
 package com.test.mainlinetestvismc.utilities;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
@@ -8,6 +9,9 @@ public class GlobalMethods {
 	public static Integer randomNumberGenerate() {
 		Random rand = new Random();
 		int value = rand.nextInt(20);
+		while(value<10) {
+			value = rand.nextInt(20);
+		}
 		return value;
 	}
 	
@@ -28,8 +32,12 @@ public class GlobalMethods {
 	}
 	
 	public static void updateName() throws IOException {
-		ExcelReader excelReader = new ExcelReader(
-				"C:/Software/Selenium_workspace/GladStoneWebDriverTest/src/test/java/com/test/mainlinetestvismc/repository/Test.xlsx");
+		File workingDir = new File(""); 
+		
+		
+		ExcelReader excelReader = new ExcelReader(workingDir.getAbsolutePath()+
+				"\\src\\test\\java\\com\\test\\mainlinetestvismc\\repository\\Test.xlsx"
+		);
 	
 		int num=randomNumberGenerate();
 		excelReader.writeCellData("PatientDetail", 1, 0, randomNameGenerate(num));
