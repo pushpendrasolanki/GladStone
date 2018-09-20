@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="145406" started-at="2018-09-14T17:40:58Z" finished-at="2018-09-14T17:43:24Z">
+  <suite name="Suite" duration-ms="184883" started-at="2018-09-20T21:50:53Z" finished-at="2018-09-20T21:53:58Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="145406" started-at="2018-09-14T17:40:58Z" finished-at="2018-09-14T17:43:24Z">
+    <test name="Test" duration-ms="184883" started-at="2018-09-20T21:50:53Z" finished-at="2018-09-20T21:53:58Z">
       <class name="com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest">
-        <test-method status="PASS" signature="driversetUp()[pri:0, instance:com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest@22f71333]" name="driversetUp" is-config="true" duration-ms="33798" started-at="2018-09-14T10:40:58Z" finished-at="2018-09-14T10:41:32Z">
+        <test-method status="PASS" signature="driversetUp()[pri:0, instance:com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest@22f71333]" name="driversetUp" is-config="true" duration-ms="32616" started-at="2018-09-20T14:50:53Z" finished-at="2018-09-20T14:51:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driversetUp -->
-        <test-method status="FAIL" signature="launchpad()[pri:0, instance:com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest@22f71333]" name="launchpad" duration-ms="106168" started-at="2018-09-14T10:41:32Z" finished-at="2018-09-14T10:43:18Z">
+        <test-method status="FAIL" signature="launchpad()[pri:0, instance:com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest@22f71333]" name="launchpad" duration-ms="148691" started-at="2018-09-20T14:51:26Z" finished-at="2018-09-20T14:53:55Z">
           <exception class="java.lang.AssertionError">
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: 
 	at org.testng.AssertJUnit.fail(AssertJUnit.java:59)
 	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
 	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
-	at com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest.launchpad(StartApplicationAndLoginTest.java:87)
+	at com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest.launchpad(StartApplicationAndLoginTest.java:100)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -58,7 +58,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchpad -->
-        <test-method status="PASS" signature="closeScript()[pri:0, instance:com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest@22f71333]" name="closeScript" is-config="true" duration-ms="5405" started-at="2018-09-14T10:43:18Z" finished-at="2018-09-14T10:43:24Z">
+        <test-method status="PASS" signature="closeScript()[pri:0, instance:com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest@22f71333]" name="closeScript" is-config="true" duration-ms="3547" started-at="2018-09-20T14:53:55Z" finished-at="2018-09-20T14:53:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeScript -->

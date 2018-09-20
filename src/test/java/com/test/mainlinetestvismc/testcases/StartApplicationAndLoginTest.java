@@ -29,10 +29,11 @@ public class StartApplicationAndLoginTest {
 
 	WebDriver driver = null;
 	public static Logger log = null;
-
+	File workingDir = new File("");
+	
 	@BeforeTest
 	public void driversetUp() throws IOException {
-		System.setProperty("webdriver.gecko.driver", "C:/Software/Selenium/Selenium_3/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", workingDir.getAbsolutePath()+"/geckodriver.exe");
 
 		log = Logger.getLogger("devpinoyLogger");
 		driver = new FirefoxDriver();
@@ -44,15 +45,15 @@ public class StartApplicationAndLoginTest {
 	@Test
 	public void launchpad() throws IOException, InterruptedException {
 		
-		File workingDir = new File("");
+		
 		log.debug("Launching Application: Gladstone : Portal");
 		PropertyConfigurator.configure(workingDir.getAbsolutePath()+
-				"\\src\\test\\java\\com\\test\\mainlinetestvismc\\repository\\Log4j.properties");
+				"/src/test/java/com/test/mainlinetestvismc/repository/Log4j.properties");
 
 		log.debug("Reading data from Excel");
 		
 		ExcelReader excelReader = new ExcelReader(workingDir.getAbsolutePath()+
-				"\\src\\test\\java\\com\\test\\mainlinetestvismc\\repository\\Test.xlsx");
+				"/src/test/java/com/test/mainlinetestvismc/repository/Test.xlsx");
 
 		int col = excelReader.getColumnCount("OrderDetail");
 		int Patientcol = excelReader.getColumnCount("PatientDetail");
@@ -62,12 +63,13 @@ public class StartApplicationAndLoginTest {
 		AddPatientPage addPatientPage = PageFactory.initElements(driver, AddPatientPage.class);
 		HashMap<String, String> logindata = new HashMap<String, String>();
 		HashMap<String, String> patientdata = new HashMap<String, String>();
+		HashMap<String, String> inlogindata = new HashMap<String, String>();
 
 		log.debug("Fetching the data from excel");
 		for (int i = 0; i < col; i++) {
 			logindata.put(excelReader.getCellData("OrderDetail", 0, i), excelReader.getCellData("OrderDetail", 1, i));
 
-			logindata.put(excelReader.getCellData("InvalidLoginDetail", 0, i), excelReader.getCellData("InvalidLoginDetail", 1, i));
+			inlogindata.put(excelReader.getCellData("InvalidLoginDetail", 0, i), excelReader.getCellData("InvalidLoginDetail", 1, i));
 		
 		}
 		for (int i = 0; i < Patientcol; i++) {
@@ -77,8 +79,9 @@ public class StartApplicationAndLoginTest {
 		}
 
 		log.debug("Entering login Entering details");
-		AssertJUnit.assertFalse(loginPage.enterLoginDetail(logindata));
+		AssertJUnit.assertFalse("Login fail",loginPage.enterLoginDetail(inlogindata));
 
+		Thread.sleep(5000);
 		driver.navigate().back();
 		
 		Thread.sleep(5000);

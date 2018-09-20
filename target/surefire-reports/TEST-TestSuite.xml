@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="106.194" tests="1" errors="0" skipped="0" failures="1">
+<testsuite name="TestSuite" time="148.705" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="JOB_NAME" value="GladstoneTest"/>
@@ -27,8 +27,8 @@
     <property name="ProgramFiles" value="C:\Program Files (x86)"/>
     <property name="user.language" value="en"/>
     <property name="JOB_BASE_NAME" value="GladstoneTest"/>
-    <property name="RUN_CHANGES_DISPLAY_URL" value="http://192.168.173.1:8080/job/GladstoneTest/3/display/redirect?page=changes"/>
-    <property name="BUILD_DISPLAY_NAME" value="#3"/>
+    <property name="RUN_CHANGES_DISPLAY_URL" value="http://192.168.173.1:8080/job/GladstoneTest/8/display/redirect?page=changes"/>
+    <property name="BUILD_DISPLAY_NAME" value="#8"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
     <property name="GIT_PREVIOUS_SUCCESSFUL_COMMIT" value="9b0f0d0ee61af2fa557d16398fb05dbbf66c826f"/>
     <property name="LOCALAPPDATA" value="C:\WINDOWS\system32\config\systemprofile\AppData\Local"/>
@@ -40,7 +40,7 @@
     <property name="NODE_NAME" value="master"/>
     <property name="PROCESSOR_ARCHITEW6432" value="AMD64"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed"/>
-    <property name="BUILD_ID" value="3"/>
+    <property name="BUILD_ID" value="8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -54,13 +54,13 @@
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_181\jre"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="os.version" value="10.0"/>
-    <property name="RUN_DISPLAY_URL" value="http://192.168.173.1:8080/job/GladstoneTest/3/display/redirect"/>
+    <property name="RUN_DISPLAY_URL" value="http://192.168.173.1:8080/job/GladstoneTest/8/display/redirect"/>
     <property name="POM_VERSION" value="0.0.1-SNAPSHOT"/>
     <property name="TMP" value="C:\WINDOWS\TEMP"/>
     <property name="path.separator" value=";"/>
     <property name="java.vm.version" value="25.181-b13"/>
     <property name="user.variant" value=""/>
-    <property name="GIT_PREVIOUS_COMMIT" value="9b0f0d0ee61af2fa557d16398fb05dbbf66c826f"/>
+    <property name="GIT_PREVIOUS_COMMIT" value="4b40aa6d2103200089b4e3ec75efcf8aa3ce9967"/>
     <property name="JOB_DISPLAY_URL" value="http://192.168.173.1:8080/job/GladstoneTest/display/redirect"/>
     <property name="CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -76,7 +76,7 @@
     <property name="POM_GROUPID" value="GladStoneWebDriverTest"/>
     <property name="user.home" value="C:\WINDOWS\system32\config\systemprofile"/>
     <property name="PUBLIC" value="C:\Users\Public"/>
-    <property name="BUILD_TAG" value="jenkins-GladstoneTest-3"/>
+    <property name="BUILD_TAG" value="jenkins-GladstoneTest-8"/>
     <property name="JENKINS_SERVER_COOKIE" value="d7b3ffd57851b0bb"/>
     <property name="HUDSON_URL" value="http://192.168.173.1:8080/"/>
     <property name="ProgramData" value="C:\ProgramData"/>
@@ -84,14 +84,14 @@
     <property name="USERPROFILE" value="C:\WINDOWS\system32\config\systemprofile"/>
     <property name="CLASSPATH" value=""/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\apache-maven-3.5.2/bin;C:\Program Files\Java\jdk1.8.0_181/bin;C:\Program Files\Java\jdk1.8.0_181/bin;C:\Program Files\apache-ant-1.10.3\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\apache-maven-3.5.2/bin;C:\Program Files\Java\jdk1.8.0_181/bin;C:\Program Files\Java\jdk1.8.0_181/bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files\apache-ant-1.10.3\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;."/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="APPDATA" value="C:\WINDOWS\system32\config\systemprofile\AppData\Roaming"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="maven.home" value="C:\apache-maven-3.5.2"/>
     <property name="java.class.path" value="C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-agent-1.12-alpha-1.jar;C:\apache-maven-3.5.2\boot\plexus-classworlds-2.5.2.jar;C:\apache-maven-3.5.2/conf/logging"/>
-    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\apache-maven-3.5.2 C:\Program Files (x86)\Jenkins\war\WEB-INF\lib\remoting-3.21.1.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.12-alpha-1.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.12-alpha-1.jar 64834"/>
-    <property name="Path" value="C:\Program Files\Java\jdk1.8.0_181/bin;C:\Program Files\apache-ant-1.10.3\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\apache-maven-3.5.2 C:\Program Files (x86)\Jenkins\war\WEB-INF\lib\remoting-3.21.1.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.12-alpha-1.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.12-alpha-1.jar 58086"/>
+    <property name="Path" value="C:\Program Files\Java\jdk1.8.0_181/bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files\apache-ant-1.10.3\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="PROCESSOR_ARCHITECTURE" value="x86"/>
     <property name="PATH+JDK" value="C:\Program Files\Java\jdk1.8.0_181/bin"/>
@@ -105,7 +105,7 @@
     <property name="HUDSON_HOME" value="C:\Program Files (x86)\Jenkins"/>
     <property name="PATH+MAVEN" value="C:\apache-maven-3.5.2/bin"/>
     <property name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
-    <property name="BUILD_URL" value="http://192.168.173.1:8080/job/GladstoneTest/3/"/>
+    <property name="BUILD_URL" value="http://192.168.173.1:8080/job/GladstoneTest/8/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="os.arch" value="amd64"/>
@@ -117,14 +117,14 @@
     <property name="line.separator" value="&#10;"/>
     <property name="MAVEN_HOME" value="C:\apache-maven-3.5.2"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="BUILD_NUMBER" value="3"/>
+    <property name="BUILD_NUMBER" value="8"/>
     <property name="BASE" value="C:\Program Files (x86)\Jenkins"/>
     <property name="JENKINS_URL" value="http://192.168.173.1:8080/"/>
     <property name="PROCESSOR_REVISION" value="4e03"/>
     <property name="GIT_BRANCH" value="origin/master"/>
     <property name="ProgramW6432" value="C:\Program Files"/>
     <property name="windir" value="C:\WINDOWS"/>
-    <property name="GIT_COMMIT" value="9b0f0d0ee61af2fa557d16398fb05dbbf66c826f"/>
+    <property name="GIT_COMMIT" value="4b40aa6d2103200089b4e3ec75efcf8aa3ce9967"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="SystemDrive" value="C:"/>
     <property name="maven3.interceptor" value="C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.12-alpha-1.jar"/>
@@ -136,46 +136,61 @@
     <property name="DriverData" value="C:\Windows\System32\Drivers\DriverData"/>
     <property name="GIT_URL" value="https://github.com/pushpendrasolanki/GladStone.git"/>
   </properties>
-  <testcase name="launchpad" classname="com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest" time="106.194">
+  <testcase name="launchpad" classname="com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest" time="148.705">
     <failure type="java.lang.AssertionError:">java.lang.AssertionError: 
 	at org.testng.AssertJUnit.fail(AssertJUnit.java:59)
 	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
 	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
-	at com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest.launchpad(StartApplicationAndLoginTest.java:87)
+	at com.test.mainlinetestvismc.testcases.StartApplicationAndLoginTest.launchpad(StartApplicationAndLoginTest.java:100)
 </failure>
     <system-out>201030.0
+201030.0
 47600.0
 9.999888879E9
 9.999888869E9
 9.999777759E9
 </system-out>
-    <system-err>1536946860151	geckodriver	INFO	geckodriver 0.21.0
-1536946860159	geckodriver	INFO	Listening on 127.0.0.1:1915
+    <system-err>1537480256161	geckodriver	INFO	geckodriver 0.21.0
+1537480256189	geckodriver	INFO	Listening on 127.0.0.1:49105
 log4j:WARN No appenders could be found for logger (org.apache.http.client.protocol.RequestAddCookies).
 log4j:WARN Please initialize the log4j system properly.
 log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
-1536946860780	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofile.f9dZvCrVHgFt"
-[Parent 17376, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 21760, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-1536946874804	Marionette	INFO	Listening on port 64838
-1536946875866	Marionette	WARN	TLS certificate errors will be ignored for this session
-1536946875935	Marionette	DEBUG	[6442450945] Frame script loaded
-1536946876051	Marionette	DEBUG	[6442450945] Frame script registered
-Sep 14, 2018 10:41:16 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+1537480256977	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofile.3K0IVpuMpsCy"
+1537480270558	Marionette	INFO	Listening on port 58156
+1537480270605	Marionette	WARN	TLS certificate errors will be ignored for this session
+1537480270661	Marionette	DEBUG	[6442450945] Frame script loaded
+1537480270809	Marionette	DEBUG	[6442450945] Frame script registered
+Sep 20, 2018 2:51:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1536946877300	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
-1536946879988	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1537480272224	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1537480274478	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
 JavaScript warning: https://www.googletagmanager.com/gtag/js, line 74: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js, line 74: unreachable code after return statement
-1536946886098	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
-1536946886110	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
-1536946886122	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
-1536946886158	Marionette	DEBUG	[6442450945] Received DOM event unload for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
-1536946889732	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
+1537480278983	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
+1537480278993	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
+1537480279013	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
+1537480279196	Marionette	DEBUG	[6442450945] Received DOM event unload for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
+1537480282686	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
 JavaScript warning: https://www.googletagmanager.com/gtag/js, line 74: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js, line 74: unreachable code after return statement
-1536946890766	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
-1536946903674	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1537480283817	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
+1537480297561	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+JavaScript error: https://mainlinetest.vismc.com/gladstone/portal/bloom/common/script/js/auth-helper.js, line 186: TypeError: data.responseJSON is undefined
+JavaScript warning: https://www.googletagmanager.com/gtag/js, line 74: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js, line 74: unreachable code after return statement
+1537480309278	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html?errorMsg=error
+1537480309639	Marionette	DEBUG	[6442450945] Received DOM event pagehide for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html?errorMsg=error
+1537480309641	Marionette	DEBUG	[6442450945] Received DOM event unload for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html?errorMsg=error
+1537480311945	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
+1537480311958	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
+1537480311984	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
+1537480311998	Marionette	DEBUG	[6442450945] Received DOM event unload for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
+1537480313750	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
+JavaScript warning: https://www.googletagmanager.com/gtag/js, line 74: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js, line 74: unreachable code after return statement
+1537480314462	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html
+1537480330246	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+JavaScript warning: https://www.googletagmanager.com/gtag/js, line 74: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js, line 74: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js, line 74: unreachable code after return statement
 </system-err>

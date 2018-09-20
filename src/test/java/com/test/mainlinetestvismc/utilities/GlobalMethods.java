@@ -36,7 +36,7 @@ public class GlobalMethods {
 		
 		
 		ExcelReader excelReader = new ExcelReader(workingDir.getAbsolutePath()+
-				"\\src\\test\\java\\com\\test\\mainlinetestvismc\\repository\\Test.xlsx"
+				"/src/test/java/com/test/mainlinetestvismc/repository/Test.xlsx"
 		);
 	
 		int num=randomNumberGenerate();

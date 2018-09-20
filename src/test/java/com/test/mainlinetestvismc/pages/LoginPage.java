@@ -59,6 +59,7 @@ public class LoginPage {
 				password.sendKeys(map.get("Password"));
 				Thread.sleep(5000);
 				clickonLoginButton();
+				Thread.sleep(5000);
 				if (errorMessage.isDisplayed()) {
 					AssertJUnit.assertTrue(
 							"Your entered Credentials does not match, but Login error message has been validated",
