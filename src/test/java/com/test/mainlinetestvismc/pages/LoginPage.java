@@ -52,19 +52,25 @@ public class LoginPage {
 		return PageFactory.initElements(driver, AddPatientPage.class);
 	}
 
-	public boolean enterLoginDetail(HashMap<String, String> map) {
+	public boolean enterLoginDetail(HashMap<String, String> map, boolean... errorverification) {
 		try {
+
 			if (userName.isEnabled() && password.isEnabled()) {
+				Thread.sleep(5000);
 				userName.sendKeys(map.get("Login"));
 				password.sendKeys(map.get("Password"));
 				Thread.sleep(5000);
 				clickonLoginButton();
 				Thread.sleep(5000);
-				if (errorMessage.isDisplayed()) {
-					AssertJUnit.assertTrue(
-							"Your entered Credentials does not match, but Login error message has been validated",
-							(errorMessage.getText().equals("Invalid email address or password.")));
-					return false;
+				if (errorverification.length > 0) {
+					if (errorverification[0]) {
+						if (errorMessage.isDisplayed()) {
+							AssertJUnit.assertTrue(
+									"Your entered Credentials does not match, but Login error message has been validated",
+									(errorMessage.getText().equals("Invalid email address or password.")));
+							return false;
+						}
+					}
 				}
 				return true;
 			}

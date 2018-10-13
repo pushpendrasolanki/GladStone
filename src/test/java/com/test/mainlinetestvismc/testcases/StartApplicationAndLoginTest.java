@@ -5,6 +5,7 @@ import org.testng.AssertJUnit;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -12,6 +13,8 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -33,11 +36,15 @@ public class StartApplicationAndLoginTest {
 	
 	@BeforeTest
 	public void driversetUp() throws IOException {
+		DesiredCapabilities capablity=  DesiredCapabilities.firefox();
+		capablity.setBrowserName("firefox");
+	//	driver=new RemoteWebDriver(new URL("http://172.20.32.1:4444/wd/hub"), capablity);
+		
 		System.setProperty("webdriver.gecko.driver", workingDir.getAbsolutePath()+"/geckodriver.exe");
 
 		log = Logger.getLogger("devpinoyLogger");
 		driver = new FirefoxDriver();
-		driver.get("https://mainlinetest.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html");
+		driver.get("https://indiastaging.vismc.com/gladstone/portal/bloom/login/pages/login_userName.html");
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		GlobalMethods.updateName();
 	}
@@ -45,7 +52,7 @@ public class StartApplicationAndLoginTest {
 	@Test
 	public void launchpad() throws IOException, InterruptedException {
 		
-		
+		boolean errorverification[]={true};
 		log.debug("Launching Application: Gladstone : Portal");
 		PropertyConfigurator.configure(workingDir.getAbsolutePath()+
 				"/src/test/java/com/test/mainlinetestvismc/repository/Log4j.properties");
@@ -78,15 +85,15 @@ public class StartApplicationAndLoginTest {
 
 		}
 
-		log.debug("Entering login Entering details");
-		AssertJUnit.assertFalse("Login fail",loginPage.enterLoginDetail(inlogindata));
+		log.debug("Entering invalid login Entering details");
+		AssertJUnit.assertFalse("Login fail",loginPage.enterLoginDetail(inlogindata, errorverification));
 
 		Thread.sleep(5000);
 		driver.navigate().back();
 		
 		Thread.sleep(5000);
 		
-		log.debug("Entering login Entering details");
+		log.debug("Entering valid login Entering details");
 		AssertJUnit.assertTrue(loginPage.enterLoginDetail(logindata));
 
 		log.debug("Navigating to Patient page to enter details");

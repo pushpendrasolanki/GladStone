@@ -30,6 +30,7 @@ public class AddPatientPage {
 
 	@FindBy(xpath = "/html/body/div[1]/div[3]/div[2]/div[1]/div/ul/li[3]/a/span")
 	public WebElement addPatienttab;
+
 	@FindBy(xpath = "//*[@id=\"DASHBOARD_TEXT_PORTAL_ADD_PATIENT\"]")
 	public WebElement addPatient;
 
@@ -46,6 +47,9 @@ public class AddPatientPage {
 
 	@FindBy(id = "dob")
 	public WebElement dateofbirth;
+
+	@FindBy(id = "gender")
+	public WebElement gender;
 
 	@FindBy(id = "radios-0")
 	public WebElement maleGender;
@@ -69,9 +73,9 @@ public class AddPatientPage {
 	public WebElement country;
 	@FindBy(id = "timeZone")
 	public WebElement timeZone;
-	@FindBy(id = "preferredContactType-1")
+	@FindBy(id = "DASHBOARD_TEXT_EMAIL")
 	public WebElement emailPreffered;
-	@FindBy(id = "preferredContactType-0")
+	@FindBy(id = "DASHBOARD_TEXT_PHONE")
 	public WebElement phonePreffered;
 
 	@FindBy(id = "hPhone")
@@ -115,53 +119,55 @@ public class AddPatientPage {
 
 	@FindBy(id = "btnCancel")
 	public WebElement button_Cancel;
-	
-	@FindBy(xpath="/html/body/div[1]/div[3]/div[1]/aside/div/div/div[1]/div/span[2]")
+
+	@FindBy(xpath = "/html/body/div[1]/div[3]/div[1]/aside/div/div/div[1]/div/span[2]")
 	public WebElement patientAdded;
-	
-	@FindBy(xpath="/html/body/div[1]/div[3]/div[1]/aside/div/div/div[1]/div/span[1]")
+
+	@FindBy(xpath = "/html/body/div[1]/div[3]/div[1]/aside/div/div/div[1]/div/span[1]")
 	public WebElement patientBack;
-	
-	@FindBy(xpath ="/html/body/div[1]/div[3]/div[2]/div[2]/div[1]/div[1]")
+
+	@FindBy(xpath = "/html/body/div[1]/div[3]/div[2]/div[2]/div[1]/div[1]")
 	public WebElement patientgrid;
-	//This method will click on add button at patient
+
+	// This method will click on add button at patient
 	public boolean userNavigateToAddPage() throws InterruptedException {
 
-		
-		
 		Thread.sleep(55000);
-		if (addPatienttab.isDisplayed()){
+		if (addPatienttab.isDisplayed()) {
 			addPatienttab.click();
 			Thread.sleep(15000);
-			
+
 			return true;
 		}
-		
-		 else if (driver.findElement(By.cssSelector(
+
+		else if (driver.findElement(By.cssSelector(
+				"html body div.wrapper2 div#menu-content-container.col-sm-12.nopadding div#page-content.page-content div#menu-content.login_patient_list-1 div.col-md-4 div.sidebar-filter.p-md button#DASHBOARD_TEXT_PORTAL_ADD_PATIENT.btn.btn-secondary.btn-block"))
+				.isDisplayed()) {
+			driver.findElement(By.cssSelector(
 					"html body div.wrapper2 div#menu-content-container.col-sm-12.nopadding div#page-content.page-content div#menu-content.login_patient_list-1 div.col-md-4 div.sidebar-filter.p-md button#DASHBOARD_TEXT_PORTAL_ADD_PATIENT.btn.btn-secondary.btn-block"))
-					.isDisplayed()) {
-				driver.findElement(By.cssSelector(
-						"html body div.wrapper2 div#menu-content-container.col-sm-12.nopadding div#page-content.page-content div#menu-content.login_patient_list-1 div.col-md-4 div.sidebar-filter.p-md button#DASHBOARD_TEXT_PORTAL_ADD_PATIENT.btn.btn-secondary.btn-block"))
-						.click();
-				Thread.sleep(15000);
-				if(!firstName.isDisplayed()) {
-					return false;
-				}
-				return true;
+					.click();
+			Thread.sleep(15000);
+			if (!firstName.isDisplayed()) {
+				return false;
 			}
+			return true;
+		}
 
 		else {
 			return false;
 		}
-		
 
 	}
 
 	public void savePatient(HashMap<String, String> patientdata) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS) ;
-			firstName.clear();
-			firstName.sendKeys(patientdata.get("FirstName"));
-		
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		Random rand = new Random();
+		int value = rand.nextInt(50);
+		int number = 999999900;
+		firstName.clear();
+		Thread.sleep(2000);
+		firstName.sendKeys(patientdata.get("FirstName"));
+
 		initName.clear();
 		initName.sendKeys(patientdata.get("InitName"));
 		lastName.clear();
@@ -170,18 +176,21 @@ public class AddPatientPage {
 		preferredName.sendKeys(patientdata.get("PrefName"));
 		dateofbirth.clear();
 		dateofbirth.sendKeys(patientdata.get("DateofBirth"));
-		if (patientdata.get("Gender").equals("Male")) {
-			maleGender.click();
-		} else {
-			feMaleGender.click();
-		}
+		// if (patientdata.get("Gender").equals("Male")) {
+		// maleGender.click();
+		// } else {
+		// feMaleGender.click();
+		// }
+
+		Select gender1 = new Select(gender);
+		gender1.selectByVisibleText(patientdata.get("Gender"));
 
 		Select activestate = new Select(isActive);
 		activestate.selectByVisibleText(patientdata.get("IsActive"));
-		
+
 		Select dropinstitute = new Select(institutions);
 		dropinstitute.selectByVisibleText(patientdata.get("Institutions"));
-		
+
 		addressLine.clear();
 		addressLine.sendKeys(patientdata.get("AddressLine"));
 		addressLine2.clear();
@@ -205,11 +214,11 @@ public class AddPatientPage {
 		}
 
 		homePhone.clear();
-		homePhone.sendKeys(patientdata.get("HomePhone"));
+		homePhone.sendKeys(String.valueOf((number * 10) + 1));
 		companyPhone.clear();
-		companyPhone.sendKeys(patientdata.get("CompanyPhone"));
+		companyPhone.sendKeys(String.valueOf((number * 10) + 2));
 		workPhone.clear();
-		workPhone.sendKeys(patientdata.get("WorkPhone"));
+		workPhone.sendKeys(String.valueOf((number * 10) + 3));
 		if (patientdata.get("HomePhonePrimary").equals("yes"))
 			phonePrimary.click();
 		if (patientdata.get("CompanyPhonePrimary").equals("yes"))
@@ -217,11 +226,10 @@ public class AddPatientPage {
 		if (patientdata.get("WorkPhonePrimary").equals("yes"))
 			phonePrimary2.click();
 
-		Random rand = new Random(); int value = rand.nextInt(50); 
 		email.clear();
-		email.sendKeys(patientdata.get("Email")+value);
+		email.sendKeys(patientdata.get("Email") + value);
 		sEmail.clear();
-		sEmail.sendKeys(patientdata.get("SecondaryEmail")+value);
+		sEmail.sendKeys(patientdata.get("SecondaryEmail") + value);
 		password.clear();
 		password.sendKeys(patientdata.get("Password"));
 
@@ -231,31 +239,29 @@ public class AddPatientPage {
 			SURVEY_STAGE__NOON.click();
 		if (patientdata.get("EVENING").equals("yes"))
 			SURVEY_STAGE__EVENING.click();
-		
+
 		Select dropprimaryprov = new Select(primaryProv);
 		dropprimaryprov.selectByIndex(1);
 		Select dropsecondaryprov = new Select(secondaryProv);
 		dropsecondaryprov.selectByIndex(2);
 		Select droptertiaryProv = new Select(tertiaryProv);
 		droptertiaryProv.selectByIndex(3);
-		//primaryProv.sendKeys(patientdata.get("PrimaryProvider"));
-		//secondaryProv.sendKeys(patientdata.get("SecondaryProvider"));
-	//	tertiaryProv.sendKeys(patientdata.get("TertiaryProvider"));
+		// primaryProv.sendKeys(patientdata.get("PrimaryProvider"));
+		// secondaryProv.sendKeys(patientdata.get("SecondaryProvider"));
+		// tertiaryProv.sendKeys(patientdata.get("TertiaryProvider"));
 		button_Save.click();
-		///html/body/div[1]/div[3]/div[2]/div[1]/div/ul/li[4]/a/span
+		/// html/body/div[1]/div[3]/div[2]/div[1]/div/ul/li[4]/a/span
 		Thread.sleep(15000);
 	}
+
 	public boolean verifyPatient(HashMap<String, String> patientdata) {
-		
+
 		if (patientAdded.isDisplayed()) {
-			String patientname[]=patientAdded.getText().split("\n");
-			if(patientname[0]
-					.equalsIgnoreCase((patientdata.get("FirstName") + " " + patientdata.get("LastName")))) {
+			String patientname[] = patientAdded.getText().split("\n");
+			if (patientname[0].equalsIgnoreCase((patientdata.get("FirstName") + " " + patientdata.get("LastName")))) {
 				System.out.println("matches");
 			}
-			Assert.assertTrue(
-					patientname[0]
-							.equals((patientdata.get("FirstName") + " " + patientdata.get("LastName"))),
+			Assert.assertTrue(patientname[0].equals((patientdata.get("FirstName") + " " + patientdata.get("LastName"))),
 					"Verify patient not added");
 
 			patientBack.click();

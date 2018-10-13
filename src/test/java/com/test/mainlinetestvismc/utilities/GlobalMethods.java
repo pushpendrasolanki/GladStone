@@ -46,5 +46,20 @@ public class GlobalMethods {
 		excelReader.writeCellData("PatientDetail", 1, 22, "learntdevops+"+String.valueOf(num)+"@gmail.com");
 		excelReader.writeCellData("PatientDetail", 1, 23, "learntdevops+"+String.valueOf(num+1)+"@gmail.com");
 	}
+	
+	public static void updatePhoneNumber(int phonenumber) throws IOException{
+
+		File workingDir = new File(""); 
+		
+		ExcelReader excelReader = new ExcelReader(workingDir.getAbsolutePath()+
+				"/src/test/java/com/test/mainlinetestvismc/repository/Test.xlsx"
+		);
+	
+		
+		excelReader.writeCellData("PatientDetail", 1, 17, String.valueOf((phonenumber*10)+1));
+		excelReader.writeCellData("PatientDetail", 1, 18, String.valueOf((phonenumber*10)+2));
+		excelReader.writeCellData("PatientDetail", 1, 19, String.valueOf((phonenumber*10)+3));
+	
+	}
 
 }
